@@ -30,10 +30,12 @@ Note: There are settings to quicken the startup procedure such as "Load all lisp
 Lets say we have five files which are referenced in the following order:
 ![](http://i.imgur.com/vBnWPms.png)<br>
 In words; A references to C and B; C references to D and E; B references to E.<br>
-If it's still hard to undestand, replace the work "references" to "uses".<br>
-Now what happens when we make changes in A file, only A will reload.<br>
-When we change C then C and A will reload.<br>
-When we change E then C, B and A will reload (in that order).
+If it's still hard to undestand, replace the words "references to" to "uses".<br>
+Now what happens~:
+When A changes then only A will reload.<br>
+When C changes then C and A will reload (in that order).<br>
+When E changes then C, B and A will reload (in that order).
+When D changes then D, C and A will reload (in that order).
 
 ##### How to add a reference?
 Syntax:
