@@ -88,7 +88,7 @@ namespace autonet.lsp {
             return new ResourceInfo() {FileName = target.ResourceName, Content = target.ReadResource()};
         }
 
-        private class Resource {
+        internal class Resource {
             public Resource(Assembly asm, string resname) {
                 Asm = asm;
                 ResourceName = resname;
