@@ -8,7 +8,7 @@ Autocad Lisp Debug Assistant (ALDA) allows fast autocad lisp development by auto
 ![](http://i.imgur.com/fYmZ3Fg.png) 
 ### Requirements
 * [.Net Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)
-* Autocad 2017+ (for lower versions, please post and issue).
+* Autocad 2017+ (for lower versions, please post an issue).
 
 ### Loading
 1. Download a release or compile it by yourself and then run the following command:
@@ -28,11 +28,11 @@ Note: There are settings to quicken the startup procedure such as "Load all lisp
 
 ### Referencing
 Lets say we have five files which are referenced in the following order:
-![](http://i.imgur.com/vBnWPms.png)
-In words; A references to C and B; C references to D and E; B references to E.
-If it's still hard to undestand, replace the work "references" to "uses".
-Now what happens when we make changes in A file, only A will reload.
-When we change C then C and A will reload.
+![](http://i.imgur.com/vBnWPms.png)<br>
+In words; A references to C and B; C references to D and E; B references to E.<br>
+If it's still hard to undestand, replace the work "references" to "uses".<br>
+Now what happens when we make changes in A file, only A will reload.<br>
+When we change C then C and A will reload.<br>
 When we change E then C, B and A will reload (in that order).
 
 ##### How to add a reference?
@@ -43,10 +43,10 @@ Syntax:
 or
 ;#	insidethesamefolder.lsp
 ```
-It can be placed anywhere in the file, but for readability - keep it on top.
+It can be placed anywhere in the file, but for readability - keep it on top.<br>
 Also this causes any comment that starts by `;#` to be a reference marker - so keep in mind to remove any comments with that format.
 ##### Referencing Requirement
-In order for the reloader to identify all references and reload accordingly, they must be added to watch list.
+In order for the reloader to identify all references and reload accordingly, they must be added to watch list.<br>
 If the .lsp file is listed, it will continue reloading what any files it knows about.
 ### Upcoming Features
 * Lisp commands API to interact with the debugger from commandline/lisp files.
